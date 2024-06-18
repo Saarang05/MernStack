@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Separator Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .box {
+            border: 1.5px solid #000;
+            padding: 10px 200px 5px 10px; /* Provide space inside the box*/
+            background-color: #fff;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, serif;
+            font-size: 16px;
+            text-align: left;
+            margin-right: 20px; /* Align text to the left */
+        }
+        .box a {
+            margin: 0 px;
+            text-decoration: underline;
+            color: blue;
+        }
+        .box a:not(:last-child)::after {
+            content: '|';
+            margin-left: 5px;
+            color: #000;
+            text-align: left;
+        }
+        .left-aligned-link{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Click any of the following links:</p>
+        <a href="https://example.com/body" class=".left-aligned-link" target="_blank">Opens in New</a>
+        <a href="https://example.com/email" class=".left-aligned-link" target="_blank">Opens in Self</a>
+        <a href="https://example.com/option" class=".left-aligned-link" target="_blank">Opens in Parent</a>
+        <a href="https://example.com/last" class=".left-aligned-link" target="_blank">Opens in Body</a>
+        <a href="https://example.com/last" class=".left-aligned-link" target="_blank">Send email</a>
+    </div>
+</body>
+</html>

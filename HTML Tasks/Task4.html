@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 400px;
+            margin: 0 auto;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+           
+        }
+        .form-group label {
+            width: 150px;
+            margin-right: 40px;
+            text-align: left;
+        }
+        .form-group input,
+        .form-group select {
+            flex: 1;
+            padding: 8px;
+            box-sizing: content-box;
+
+        }
+        input[type="submit"] {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            width: 60px;
+            padding: 2px;
+            background-color: #5fbce7;
+            color: black;
+            border: solid;
+            cursor: pointer;
+            margin-left: 0px;
+            margin-top: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #41de63;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="/submit_registration" method="post">
+    <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+    </div>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div class="form-group">
+        <label for="repassword">Re Password:</label>
+        <input type="password" id="repassword" name="repassword" required>
+    </div>
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+    </div>
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <input type="submit" value="Save">
+</form>
+
+</body>
+</html>
